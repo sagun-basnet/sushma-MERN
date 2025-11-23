@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  /* height: 100vh; */
+  border: 4px solid black;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* align-items: end; */
+  flex-wrap: wrap;
+}
+.item {
+  border: 2px solid red;
+  height: 12rem;
+  width: 12rem;
+}
+/* .item2 {
+  display: flex;
+  gap: 1rem;
+} */
+
