@@ -64,7 +64,7 @@
 // };
 // console.log(obj.phone.other[1]);
 
-let i = 0;
+// let i = 0;
 // const myIntervel = setInterval(() => {
 //   console.log(i);
 //   i++;
@@ -73,8 +73,86 @@ let i = 0;
 //   }
 // }, 1000);
 
-const myTimeout = setTimeout(() => {
-  console.log("Time out");
-}, 2000);
+// try {
+//   const myTimeout = setTimeout(() => {
+//     console.log("Time out");
+//   }, 2000);
+// } catch (err) {
+//   console.log(err);
+// } finally {
+//   console.log("finally");
+// }
 
-clearTimeout(myTimeout);
+// clearTimeout(myTimeout);
+
+// const name = "jhon";
+// const age = 29;
+// const address = "bratnagar";
+// const phone = "9812343434";
+
+// console.log(
+//   "Welcome " +
+//     name +
+//     "." +
+//     " You are " +
+//     age +
+//     " years old." +
+//     "You live in " +
+//     address +
+//     "." +
+//     " Contact number: " +
+//     phone
+// );
+
+// console.log(
+//   `Welcome ${name}. You are ${age} years old. You live in ${address}. Contact number: ${phone}`
+// );
+
+// const arr = [1, 2, 5, 7, 89, 0, 4, 6];
+
+// const [first, second, third] = arr;
+
+// console.log(first, second, third);
+
+// const obj = {
+//   name: "jhon",
+//   email: "jhon@gmail.com",
+//   password: "123456789",
+//   phone: "98123243242",
+// };
+
+// const { name, email, phone, password } = obj;
+
+// const myFun = ({name}) => {
+
+// };
+// myFun(obj);
+// const arr1 = [1, 2, 3, 4, 5];
+// const arr2 = [6, 7, 8, 9, 0];
+// const arr3 = [...arr1, ...arr2];
+// console.log(arr3);
+
+// const arr3 = [1,2,3,4,5,6,7,8,9,0]
+
+// const arr = [1, 2, 5, 7, 89, 0, 4, 6];
+// const [first, second, third, ...others] = arr;
+
+// console.log(...arr);
+
+// console.log(others);
+
+// let obj = {
+//   name: "jhon",
+//   email: "jhon@gmail.com",
+//   password: "123456789",
+//   phone: "98123243242",
+// };
+
+// obj.name = "deo";
+
+// console.log(obj);
+
+// const obj2 = obj;
+// console.log(obj2);
+
+// const { password, ...res } = obj;
