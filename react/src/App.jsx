@@ -1,4 +1,5 @@
 import Card from "./components/Card";
+import Count from "./components/Count";
 import Navbar from "./components/Navbar";
 
 const App = () => {
@@ -36,7 +37,8 @@ const App = () => {
           );
         })}
       </div> */}
-      <Navbar userName={"Jhon deo"} />
+
+      <Count />
     </div>
   );
 };
