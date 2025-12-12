@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import NotFount from "./pages/NotFount";
 import SignupPage from "./pages/SignupPage";
 import SigninPage from "./pages/SigninPage";
+import API from "./components/API";
+import SinglePage from "./components/SinglePage";
 
 const App = () => {
   const HomeLayout = () => {
@@ -47,10 +49,6 @@ const App = () => {
           path: "/service",
           element: <Service />,
         },
-        {
-          path: "/contact",
-          element: <Contact />,
-        },
       ],
     },
     // {
@@ -74,6 +72,14 @@ const App = () => {
     {
       path: "/signin",
       element: <SigninPage />,
+    },
+    {
+      path: "/api",
+      element: <API />,
+    },
+    {
+      path: "/post/:id",
+      element: <SinglePage />,
     },
     {
       path: "*",
