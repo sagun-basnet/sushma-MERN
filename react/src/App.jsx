@@ -10,6 +10,8 @@ import SignupPage from "./pages/SignupPage";
 import SigninPage from "./pages/SigninPage";
 import API from "./components/API";
 import SinglePage from "./components/SinglePage";
+import AddProduct from "./components/AddProduct";
+import AllProducts from "./pages/AllProducts";
 
 const App = () => {
   const HomeLayout = () => {
@@ -72,6 +74,14 @@ const App = () => {
     {
       path: "/signin",
       element: <SigninPage />,
+    },
+    {
+      path: "/add-product",
+      element: <AddProduct />,
+    },
+    {
+      path: "/get-all-products",
+      element: <AllProducts />,
     },
     {
       path: "/api",
