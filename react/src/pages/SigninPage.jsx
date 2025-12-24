@@ -1,9 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const SigninPage = () => {
+  const navigate = useNavigate();
+  const { login, currentUser } = useContext(AuthContext);
+  console.log(currentUser);
+
   const init = {
-    email: "",
+    username: "",
     password: "",
   };
   const [formData, setFormData] = useState(init);
@@ -14,18 +19,21 @@ const SigninPage = () => {
     console.log(formData);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formData.email === "") {
-      return alert("Enter Email...");
+    if (formData.username === "") {
+      return alert("Enter Username...");
     }
-    if (formData.password.length < 9) {
+    if (formData.password.length < 6) {
       return alert("Password should be of 8 char..");
     }
 
-    console.log(formData);
+    const res = await login(formData);
+    console.log(res, ":LOGIN RES");
+
     setFormData(init);
+    navigate("/");
   };
 
   return (
@@ -36,12 +44,12 @@ const SigninPage = () => {
       >
         <h1 className="text-3xl font-bold">Login</h1>
         <input
-          type="email"
-          name="email"
+          type="text"
+          name="username"
           id=""
-          placeholder="Enter Email"
+          placeholder="Enter Username"
           className="border-2 rounded-md p-2 font-bold w-full"
-          value={formData.email}
+          value={formData.username}
           onChange={handleChange}
         />
         <input
