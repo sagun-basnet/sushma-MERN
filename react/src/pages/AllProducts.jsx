@@ -4,9 +4,14 @@ import axios from "axios";
 
 const AllProducts = () => {
   const [data, setData] = useState([]);
+  const token = localStorage.getItem("appToken");
   const fetchApi = async () => {
     await axios
-      .get("https://fakestoreapi.com/products")
+      .get("https://fakestoreapi.com/products", {
+        headers: {
+          Authorization: token,
+        },
+      })
       .then((res) => {
         console.log(res);
         setData(res.data);

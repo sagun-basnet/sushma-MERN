@@ -1,10 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Service from "./pages/Service";
-import Contact from "./pages/Contact";
+// import Contact from "./pages/Contact";
 import NotFount from "./pages/NotFount";
 import SignupPage from "./pages/SignupPage";
 import SigninPage from "./pages/SigninPage";

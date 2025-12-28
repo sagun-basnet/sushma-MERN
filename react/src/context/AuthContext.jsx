@@ -22,6 +22,7 @@ export const AuthContextProvider = ({ children }) => {
         inputs
       );
       setCurrentUser(user);
+      localStorage.setItem("appToken", res.data.token);
 
       return res;
     } catch (err) {
